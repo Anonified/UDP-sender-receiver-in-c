@@ -33,42 +33,40 @@ The program sends a UDP message from your computer to a **mobile phone** acting 
 ### 3. Replace Phone IP in Code
 
 In the source file, replace:
-```c
+
 sin.sin_addr.s_addr = inet_addr("YOUR_PHONEs_IP");
+
 with:
-
-c
 Copy code
+```c
 sin.sin_addr.s_addr = inet_addr("192.168.1.7");
+```
 (use your phone’s actual IP address)
-
 4. Compile
 bash
-Copy code
+```c
 gcc udp.c -o udp
+```
 5. Run
 bash
-Copy code
+```c
 ./udp
 Enter a message in the terminal
+```
 
 The message will be received by the phone
-
 If the phone sends a reply, it will be printed in the terminal
 
-Notes
+### Notes
 Uses UDP (connectionless protocol) — no handshake, no delivery guarantee
-
 Designed for local network testing
-
 Firewalls may block UDP traffic on some systems
 
-Purpose
+### Purpose
 This project is intended for learning socket programming fundamentals, including:
-
 UDP sockets
-
 Message sending and receiving
-
 Client–server communication without TCP
+
+#### !~ Thats a wrap ~! 
 
