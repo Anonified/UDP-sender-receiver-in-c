@@ -33,9 +33,9 @@ The program sends a UDP message from your computer to a **mobile phone** acting 
 ### 3. Replace Phone IP in Code
 
 In the source file, replace:
-
+```c
 sin.sin_addr.s_addr = inet_addr("YOUR_PHONEs_IP");
-
+```
 with:
 Copy code
 ```c
